@@ -22,17 +22,19 @@ public class FileDemo {
     }
 
     public static void readFile(File file) throws IOException{
-        InputStream inputStream = new FileInputStream(file);
-        byte[] data = inputStream.readAllBytes();
-        for(int i=0; i<data.length;i++){
-            char ch = (char) data[i];
-            System.out.print(ch);
+        try (InputStream inputStream = new FileInputStream(file)) {
+            byte[] data = inputStream.readAllBytes();
+            for(int i=0; i<data.length;i++){
+                char ch = (char) data[i];
+                System.out.print(ch);
+            }
         }
     }
 
     public static void writeFile(File file) throws IOException{
-        OutputStream outputStream = new FileOutputStream(file);
-        String name = "Tapan Kumar Mandal";
-        outputStream.write(name.getBytes());
+        try (OutputStream outputStream = new FileOutputStream(file)) {
+            String name = "Tapan Kumar Mandal";
+            outputStream.write(name.getBytes());
+        }
     }
 }
