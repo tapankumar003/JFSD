@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="LoginServlet" method="post">
+		<input type="text" placeholder="Enter UserId" name="uid"> <input
+			type="password" placeholder="Enter Password" name="pass"
+			class="myInput"> <input type="checkbox"
+			onclick="myFunction()">Show Password <input type="submit"
+			value="LogIn">
+	</form>
+	<script>
+		function myFunction() {
+			var x = document.querySelector(".myInput");
+			if (x.type === "password") {
+				x.type = "text";
+			} else {
+				x.type = "password";
+			}
+		}
+	</script>
+</body>
+</html>
