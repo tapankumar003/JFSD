@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Students Data</title>
+<style type="text/css">
+.head{
+font-weight: 500;
+font-size: 30px;
+color: red;
+}
+
+.datas{
+font-style: italic;
+color: blue;
+}
+</style>
+</head>
+<body>
+<h1 th:text="${name}"></h1>
+<table>
+<thead>
+<tr>
+<td class="head">Students Name</td>
+</tr>
+</thead>
+<tbody>
+<tr th:each="stud:${student}" class="datas">
+<td th:text="${stud.name}"></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
