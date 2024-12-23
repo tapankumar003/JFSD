@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "hello",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "JFSD_72d9d686"
+        },
+        {
+            "type": "java",
+            "name": "EcomDukanApplication",
+            "request": "launch",
+            "mainClass": "com.EcomDukanApplication",
+            "projectName": "Ecom-Dukan"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-FirstAppApplication<first_app>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
