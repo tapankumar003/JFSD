@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:each="employee:${employees}">
+<div th:text=${employee.name}></div>
+<div th:text=${employee.designation}></div>
+<img th:src="@{${'/empImages/'+employee.imagePath}}" alt="employee Image" width="100px">
+</div>
+
+</body>
+</html>

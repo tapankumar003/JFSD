@@ -59,12 +59,6 @@ public class ProductController {
     		imageUUID = "abc";
     	}
     	product.setImagePath(imageUUID);
-    	
-//    	String fileName = file.getOriginalFilename();
-//    	File uploadFile = new File(uploadDir+fileName);
-//    	file.transferTo(uploadFile);
-//    	
-//    	product.setImagePath("/images/"+fileName);
     	productService.saveProduct(product);
     	
     	return "redirect:/products";

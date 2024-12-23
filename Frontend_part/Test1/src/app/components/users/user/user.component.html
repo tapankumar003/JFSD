@@ -1,0 +1,22 @@
+<p>user works!</p>
+<!-- String interpolation -->
+<div class="opp">{{a}} + {{b}} = {{sum}}</div>
+<div>{{m}}</div>
+<div>{{method1()}}</div>
+
+<!-- property binding -->
+ <p [innerText]="m"></p>
+ <input type="text" [value]="m">
+ <p [innerText]="'No'+'one'"></p>
+ <p [innerText]="method1()"></p>
+
+ <!-- event binding -->
+
+ <button (click)="method2()">clickMe</button>
+ <hr>
+ <p>my fav animal is {{animal}}</p>
+ <button (click)="animal='🐱'">change fav</button>
+ <input (keyup)="onKeyUp($event)" type="text">
+
+ <hr>
+<h2></h2>
