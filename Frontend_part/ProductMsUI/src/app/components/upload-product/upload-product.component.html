@@ -1,0 +1,22 @@
+<h3>add Product</h3>
+<div>
+    <form #regForm="ngForm" (ngSubmit)="productUpload(regForm.value)">
+        <div>
+            <input type="number" placeholder="Enter Id" name="id" ngModel hidden>
+        </div>
+        <div>
+            Product Name: <input type="text" placeholder="Enter product name:" name="productName" ngModel required>
+        </div>
+        <button type="submit">save</button>
+    </form>
+</div>
+<hr>
+<div>
+    @for(plist of productList; track plist){
+        <div>
+            <h3>
+               {{plist.id}}.  {{plist.productName}}
+            </h3>
+        </div>
+    }
+</div>
